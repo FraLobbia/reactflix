@@ -1,11 +1,15 @@
 import { Component } from "react";
-import Form from "react-bootstrap/Form";
 import generi from "./config/generi.json";
+import { Form } from "react-bootstrap";
+
 class SelectMenu extends Component {
 	render() {
 		return (
-			<Form.Select aria-label="Genre">
-				{/* <option>Genre</option> */}
+			<Form.Select
+				aria-label="Genre"
+				className=" bg-black text-white ms-md-3"
+				style={{ width: "200px" }}
+			>
 				{generi.map((genere, index) => {
 					return (
 						<option key={genere.name} value={genere.name}>
