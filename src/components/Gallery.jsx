@@ -3,35 +3,46 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SingleMovie from "./SingleMovie";
+import { token } from "./config/token";
+import NextArrow from "./NextArrows";
+import PrevArrow from "./PrevArrow";
 class Gallery extends Component {
 	state = {
 		data: [],
-		isLoaded: false,
 		settings: {
 			dots: false,
 			infinite: true,
 			speed: 500,
-			slidesToShow: 6,
+			slidesToShow: 10,
 			slidesToScroll: 1,
+			nextArrow: <NextArrow />,
+			prevArrow: <PrevArrow />,
 			responsive: [
+				{
+					breakpoint: 1200,
+					settings: {
+						slidesToShow: 7,
+						slidesToScroll: 1,
+					},
+				},
 				{
 					breakpoint: 1024,
 					settings: {
-						slidesToShow: 4,
+						slidesToShow: 5,
 						slidesToScroll: 1,
 					},
 				},
 				{
 					breakpoint: 600,
 					settings: {
-						slidesToShow: 2,
+						slidesToShow: 4,
 						slidesToScroll: 1,
 					},
 				},
 				{
 					breakpoint: 480,
 					settings: {
-						slidesToShow: 1,
+						slidesToShow: 2,
 						slidesToScroll: 1,
 					},
 				},
@@ -40,7 +51,6 @@ class Gallery extends Component {
 	};
 
 	fetchData = async () => {
-		const token = "d77c4ed0";
 		const endpoint = `http://www.omdbapi.com/?apikey=${token}&s=${this.props.searchQuery}`;
 
 		try {
@@ -62,7 +72,7 @@ class Gallery extends Component {
 	};
 
 	render() {
-		const { data, isLoaded } = this.state;
+		const { data } = this.state;
 
 		return (
 			<>
@@ -74,24 +84,6 @@ class Gallery extends Component {
 							</div>
 						))}
 				</Slider>
-				{/* <Carousel className="mt-5 bg-black">
-					{isLoaded &&
-						data.Search.map((film, index) => (
-							<Carousel.Item key={index}>
-								<div className="movie-row">
-									<div className="row g-1">
-										<div className="col-md-2">
-											<img
-												className="img-fluid movie-cover"
-												src={film.Poster}
-												alt={film.Title}
-											/>
-										</div>
-									</div>
-								</div>
-							</Carousel.Item>
-						))}
-				</Carousel> */}
 			</>
 		);
 	}

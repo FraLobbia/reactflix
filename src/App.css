@@ -8,6 +8,7 @@ ul {
 
 body {
     background-color: black;
+    color: white;
 }
 
 .slick-next,
@@ -16,10 +17,10 @@ body {
     z-index: 3 !important;
 }
 
-.slick-prev {
+/* .slick-prev {
     margin-left: 2rem;
 }
 
 .slick-next {
     margin-right: 4.5rem;
-}
+} */
