@@ -9,3 +9,17 @@ ul {
 body {
     background-color: black;
 }
+
+.slick-next,
+.slick-prev {
+    font-size: large !important;
+    z-index: 3 !important;
+}
+
+.slick-prev {
+    margin-left: 2rem;
+}
+
+.slick-next {
+    margin-right: 4.5rem;
+}

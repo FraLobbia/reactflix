@@ -12,7 +12,10 @@ function App() {
 		<>
 			<MyNav logo={logo} />
 			<ActionBar />
-			<Gallery />
+			<h2>Trending</h2>
+			<Gallery searchQuery="batman" />
+			<Gallery searchQuery="spider-man" stile="my-5" />
+			<Gallery searchQuery="superman" />
 			<MyFooter />
 		</>
 	);
