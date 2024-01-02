@@ -1,11 +1,10 @@
 import React from "react";
 
-const SingleMovie = (props) => {
+const SingleMovie = ({ Title, img }) => {
 	return (
 		<img
-			src={props.img}
-			className="poster"
-			alt="description"
+			src={img}
+			alt={`Poster di ${Title}`}
 			style={{ width: "100%", height: "300px", objectFit: "contain" }}
 		/>
 	);

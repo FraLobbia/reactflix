@@ -9,6 +9,7 @@ function PrevArrow(props) {
 				transform: "scale(3)",
 				opacity: "0.3",
 				marginLeft: "3rem",
+				zIndex: "3",
 			}}
 			onClick={onClick}
 		/>

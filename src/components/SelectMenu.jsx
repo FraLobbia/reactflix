@@ -10,7 +10,7 @@ class SelectMenu extends Component {
 				className=" bg-black text-white ms-md-3"
 				style={{ width: "200px" }}
 			>
-				{generi.map((genere, index) => {
+				{generi.map((genere) => {
 					return (
 						<option key={genere.name} value={genere.name}>
 							{genere.name}

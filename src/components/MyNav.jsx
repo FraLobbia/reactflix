@@ -1,9 +1,10 @@
 import { Nav, Container, Navbar } from "react-bootstrap";
 
 import navBarConfig from "./config/navBarConfig.json";
+import DropdownUser from "./DropdownUser";
 function MyNav(props) {
 	return (
-		<Navbar bg="black" data-bs-theme="dark" expand="md">
+		<Navbar data-bs-theme="dark" expand="md">
 			<Container fluid className="p-0">
 				<Navbar.Brand href="#">
 					<img
@@ -13,7 +14,10 @@ function MyNav(props) {
 						style={{ height: "50px" }}
 					/>
 				</Navbar.Brand>
-				<Navbar.Toggle className="ms-auto" aria-controls="myNavbar" />
+				<Navbar.Toggle
+					className="ms-auto me-2"
+					aria-controls="myNavbar"
+				/>
 
 				<Navbar.Collapse
 					id="myNavbar"
@@ -31,6 +35,17 @@ function MyNav(props) {
 								</Nav.Link>
 							);
 						})}
+					</Nav>
+					<Nav>
+						<Nav.Link href="#">
+							<i className="bi bi-search px-4"></i>
+						</Nav.Link>
+
+						<Nav.Link href="#">KIDS</Nav.Link>
+						<Nav.Link href="#">
+							<i class="bi bi-bell-fill ps-4 pe-2"></i>
+						</Nav.Link>
+						<DropdownUser />
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

@@ -80,7 +80,10 @@ class Gallery extends Component {
 					{data.Search &&
 						data.Search.map((movie) => (
 							<div key={movie.imdbID}>
-								<SingleMovie img={movie.Poster} />
+								<SingleMovie
+									img={movie.Poster}
+									Title={movie.Title}
+								/>
 							</div>
 						))}
 				</Slider>

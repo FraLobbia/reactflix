@@ -9,6 +9,7 @@ function NextArrow(props) {
 				transform: "scale(3)",
 				opacity: "0.3",
 				marginRight: "3rem",
+				zIndex: "3",
 			}}
 			onClick={onClick}
 		/>
