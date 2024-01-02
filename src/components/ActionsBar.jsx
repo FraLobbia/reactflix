@@ -8,9 +8,9 @@ class ActionBar extends Component {
 		return (
 			<Container
 				fluid
-				className="d-flex flex-column flex-md-row align-items-center  bg-black py-4"
+				className="d-flex flex-column flex-md-row align-items-center py-4"
 			>
-				<h1 className="text-white">TV shows</h1>
+				<h1>TV shows</h1>
 				<SelectMenu />
 				<div className="ms-md-auto mt-3 mt-md-0">
 					<Button variant="outline-light">

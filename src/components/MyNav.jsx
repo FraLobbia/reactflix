@@ -4,8 +4,11 @@ import navBarConfig from "./config/navBarConfig.json";
 import DropdownUser from "./DropdownUser";
 function MyNav(props) {
 	return (
-		<Navbar data-bs-theme="dark" expand="md">
-			<Container fluid className="p-0">
+		<Navbar expand="md">
+			<Container
+				fluid
+				className="p-0"
+			>
 				<Navbar.Brand href="#">
 					<img
 						src={props.logo}
@@ -37,12 +40,23 @@ function MyNav(props) {
 						})}
 					</Nav>
 					<Nav>
-						<Nav.Link href="#">
+						<Nav.Link
+							className="text-white"
+							href="#"
+						>
 							<i className="bi bi-search px-4"></i>
 						</Nav.Link>
 
-						<Nav.Link href="#">KIDS</Nav.Link>
-						<Nav.Link href="#">
+						<Nav.Link
+							className="text-white"
+							href="#"
+						>
+							KIDS
+						</Nav.Link>
+						<Nav.Link
+							className="text-white"
+							href="#"
+						>
 							<i class="bi bi-bell-fill ps-4 pe-2"></i>
 						</Nav.Link>
 						<DropdownUser />

@@ -3,7 +3,10 @@ import Dropdown from "react-bootstrap/Dropdown";
 function DropdownUser() {
 	return (
 		<Dropdown>
-			<Dropdown.Toggle variant="black" id="dropdown-basic">
+			<Dropdown.Toggle
+				variant="black"
+				id="dropdown-basic"
+			>
 				<img
 					src="https://pbs.twimg.com/media/DN1OYIFX0AAbOMe.jpg"
 					style={{ width: "30px" }}
