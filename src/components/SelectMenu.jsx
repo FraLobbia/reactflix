@@ -7,7 +7,7 @@ class SelectMenu extends Component {
 		return (
 			<Form.Select
 				aria-label="Genre"
-				className="ms-md-3 border "
+				className="ms-md-3 "
 				style={{ width: "200px", left: "-100%" }}
 			>
 				{generi.map((genere) => {

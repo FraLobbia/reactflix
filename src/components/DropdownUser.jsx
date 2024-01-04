@@ -15,7 +15,7 @@ function DropdownUser() {
 				/>
 				{/* da sistemare direzione dropdown */}
 			</Dropdown.Toggle>
-			<Dropdown.Menu>
+			<Dropdown.Menu className="me-2">
 				<Dropdown.Item href="#/action-1">Profilo</Dropdown.Item>
 				<Dropdown.Item href="#/action-2">Settings action</Dropdown.Item>
 				<Dropdown.Divider />

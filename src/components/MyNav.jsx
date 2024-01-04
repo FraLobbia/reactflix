@@ -24,20 +24,8 @@ function MyNav(props) {
 
 				<Navbar.Collapse
 					id="myNavbar"
-					className="text-center justify-content-between"
+					className="text-center justify-content-between flex-row-reverse"
 				>
-					<Nav>
-						{navBarConfig.map((navItem, index) => {
-							return (
-								<Nav.Link
-									href={navItem.link}
-									key={`navItem-${index}`}
-								>
-									{navItem.name}
-								</Nav.Link>
-							);
-						})}
-					</Nav>
 					<hr className="d-md-none" />
 					<Nav className="flex-row justify-content-center">
 						<Nav.Link href="#">
@@ -51,6 +39,18 @@ function MyNav(props) {
 						<DropdownUser />
 					</Nav>
 					<hr className="d-md-none" />
+					<Nav>
+						{navBarConfig.map((navItem, index) => {
+							return (
+								<Nav.Link
+									href={navItem.link}
+									key={`navItem-${index}`}
+								>
+									{navItem.name}
+								</Nav.Link>
+							);
+						})}
+					</Nav>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>

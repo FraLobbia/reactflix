@@ -10,7 +10,7 @@ class ActionBar extends Component {
 				fluid
 				className="d-flex flex-column flex-md-row align-items-center py-4"
 			>
-				<h1 className="ms-3">TV shows</h1>
+				<h1 className="ms-md-3">TV shows</h1>
 				<SelectMenu />
 				<div className="ms-md-auto mt-3 mt-md-0 me-3">
 					<Button variant="outline-light">

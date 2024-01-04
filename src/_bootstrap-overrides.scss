@@ -15,6 +15,7 @@ $border-radius: 0;
 $focus-ring-width: 0;
 $dropdown-border-color: gray;
 $dropdown-link-hover-color: black;
+
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark"; // senza questa da errore
