@@ -76,7 +76,10 @@ class Gallery extends Component {
 
 		return (
 			<>
-				<Slider {...this.state.settings} className={this.props.stile}>
+				<Slider
+					{...this.state.settings}
+					className={this.props.stile}
+				>
 					{data.Search &&
 						data.Search.map((movie) => (
 							<div key={movie.imdbID}>

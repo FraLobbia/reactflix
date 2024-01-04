@@ -2,7 +2,7 @@ import Dropdown from "react-bootstrap/Dropdown";
 
 function DropdownUser() {
 	return (
-		<Dropdown>
+		<Dropdown align="end">
 			<Dropdown.Toggle
 				variant="black"
 				id="dropdown-basic"
@@ -16,9 +16,15 @@ function DropdownUser() {
 				{/* da sistemare direzione dropdown */}
 			</Dropdown.Toggle>
 			<Dropdown.Menu>
-				<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-				<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-				<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+				<Dropdown.Item href="#/action-1">Profilo</Dropdown.Item>
+				<Dropdown.Item href="#/action-2">Settings action</Dropdown.Item>
+				<Dropdown.Divider />
+				<Dropdown.Item
+					className="text-secondary"
+					href="#/action-3"
+				>
+					Log Out
+				</Dropdown.Item>
 			</Dropdown.Menu>
 		</Dropdown>
 	);

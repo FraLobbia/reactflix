@@ -8,14 +8,16 @@
 
 $body-bg: black;
 $body-color: white;
-// $nav-link-color: white; // non me lo prende e non capisco perchè, sono costretto ad usare la classe text-white
+$navbar-light-color: white;
+$navbar-light-hover-color: gray;
 $border-color: white;
 $border-radius: 0;
-$container-padding-x: 100px;
-
+$focus-ring-width: 0;
+$dropdown-border-color: gray;
+$dropdown-link-hover-color: black;
 // 3. Include remainder of required Bootstrap stylesheets
 @import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/variables-dark"; // senza questa da errore
 
 // 4. Include any default map overrides here
 

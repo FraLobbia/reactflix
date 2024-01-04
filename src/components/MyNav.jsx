@@ -24,7 +24,7 @@ function MyNav(props) {
 
 				<Navbar.Collapse
 					id="myNavbar"
-					className="justify-content-between"
+					className="text-center justify-content-between"
 				>
 					<Nav>
 						{navBarConfig.map((navItem, index) => {
@@ -32,35 +32,25 @@ function MyNav(props) {
 								<Nav.Link
 									href={navItem.link}
 									key={`navItem-${index}`}
-									className="text-white"
 								>
 									{navItem.name}
 								</Nav.Link>
 							);
 						})}
 					</Nav>
-					<Nav>
-						<Nav.Link
-							className="text-white"
-							href="#"
-						>
+					<hr className="d-md-none" />
+					<Nav className="flex-row justify-content-center">
+						<Nav.Link href="#">
 							<i className="bi bi-search px-4"></i>
 						</Nav.Link>
 
-						<Nav.Link
-							className="text-white"
-							href="#"
-						>
-							KIDS
-						</Nav.Link>
-						<Nav.Link
-							className="text-white"
-							href="#"
-						>
+						<Nav.Link href="#">KIDS</Nav.Link>
+						<Nav.Link href="#">
 							<i class="bi bi-bell-fill ps-4 pe-2"></i>
 						</Nav.Link>
 						<DropdownUser />
 					</Nav>
+					<hr className="d-md-none" />
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
