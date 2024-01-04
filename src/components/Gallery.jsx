@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import SingleMovie from "./SingleMovie";
 import { token } from "./config/token";
 import NextArrow from "./NextArrows";
 import PrevArrow from "./PrevArrow";
@@ -13,15 +12,12 @@ class Gallery extends Component {
 
 	fetchData = async () => {
 		const endpoint = `http://www.omdbapi.com/?apikey=${token}&s=${this.props.searchQuery}`;
-
 		try {
 			const response = await fetch(endpoint);
-
 			if (response.ok) {
 				const data = await response.json();
 				this.setState({ data });
 				this.setState({ isLoaded: true });
-				console.log(data);
 			}
 		} catch (error) {
 			console.log(error);
@@ -34,7 +30,7 @@ class Gallery extends Component {
 
 	render() {
 		const { data } = this.state;
-		const settings = {
+		const settingsSlider = {
 			dots: false,
 			infinite: true,
 			speed: 500,
@@ -77,17 +73,21 @@ class Gallery extends Component {
 		return (
 			<>
 				<Slider
-					{...settings}
+					{...settingsSlider}
 					className={this.props.stile}
 				>
 					{data.Search &&
 						data.Search.map((movie) => (
-							<div key={movie.imdbID}>
-								<SingleMovie
-									img={movie.Poster}
-									Title={movie.Title}
-								/>
-							</div>
+							<img
+								key={movie.imdbID}
+								src={movie.Poster}
+								alt={`Poster di ${movie.Title}`}
+								style={{
+									width: "100%",
+									height: "300px",
+									objectFit: "contain",
+								}}
+							/>
 						))}
 				</Slider>
 			</>

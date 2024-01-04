@@ -13,15 +13,14 @@ function DropdownUser() {
 					alt=""
 					srcset=""
 				/>
-				{/* da sistemare direzione dropdown */}
 			</Dropdown.Toggle>
 			<Dropdown.Menu className="me-2">
-				<Dropdown.Item href="#/action-1">Profilo</Dropdown.Item>
-				<Dropdown.Item href="#/action-2">Settings action</Dropdown.Item>
+				<Dropdown.Item href="#">Profilo</Dropdown.Item>
+				<Dropdown.Item href="#">Settings action</Dropdown.Item>
 				<Dropdown.Divider />
 				<Dropdown.Item
 					className="text-secondary"
-					href="#/action-3"
+					href="#"
 				>
 					Log Out
 				</Dropdown.Item>

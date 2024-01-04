@@ -1,9 +1,11 @@
 import { Button, Col, Container, Row } from "react-bootstrap";
 import footerLinks from "./config/footerLinks.json";
-import { Suspense } from "react";
 function MyFooter() {
 	return (
-		<Container style={{ maxWidth: "800px" }}>
+		<Container
+			className=" mt-5"
+			style={{ maxWidth: "800px" }}
+		>
 			<Row>
 				<Col xs={12}>
 					<div className="text-secondary">
@@ -40,9 +42,7 @@ function MyFooter() {
 				Service Code
 			</Button>
 
-			<div className="mt-3">
-				<p className=" text-secondary">&copy; 1997-2019 Netflix Inc.</p>
-			</div>
+			<p className="mt-3 text-secondary">&copy; 1997-2019 Netflix Inc.</p>
 		</Container>
 	);
 }

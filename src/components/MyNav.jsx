@@ -27,18 +27,20 @@ function MyNav(props) {
 					className="text-center justify-content-between flex-row-reverse"
 				>
 					<hr className="d-md-none" />
+
 					<Nav className="flex-row justify-content-center">
 						<Nav.Link href="#">
 							<i className="bi bi-search px-4"></i>
 						</Nav.Link>
-
 						<Nav.Link href="#">KIDS</Nav.Link>
 						<Nav.Link href="#">
 							<i class="bi bi-bell-fill ps-4 pe-2"></i>
 						</Nav.Link>
 						<DropdownUser />
 					</Nav>
+
 					<hr className="d-md-none" />
+
 					<Nav>
 						{navBarConfig.map((navItem, index) => {
 							return (
