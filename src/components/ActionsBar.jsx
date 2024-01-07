@@ -14,10 +14,10 @@ class ActionBar extends Component {
 				<SelectMenu />
 				<div className="ms-md-auto mt-3 mt-md-0 me-3">
 					<Button variant="outline-light">
-						<i className="bi bi-list  p-1 fs-6"></i>
+						<i className="bi bi-list p-1 fs-6"></i>
 					</Button>
 					<Button variant="outline-light">
-						<i className="bi bi-grid-fill  p-1 fs-6"></i>
+						<i className="bi bi-grid-fill p-1 fs-6"></i>
 					</Button>
 				</div>
 			</Container>
